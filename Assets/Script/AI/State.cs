@@ -6,7 +6,7 @@ public class State
 
 	protected string name;
 
-	public string Name
+	public virtual string Name
 	{
 		get{return name;}
 		/*

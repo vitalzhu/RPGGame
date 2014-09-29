@@ -3,6 +3,15 @@ using System.Collections;
 
 public class IdleState : State 
 {
+    public override string Name
+    {
+        get
+        {
+            this.name = StateName.Idle;
+            return StateName.Idle;
+        }
+    }
+
 	public IdleState()
 	{
 		this.name = StateName.Idle;
