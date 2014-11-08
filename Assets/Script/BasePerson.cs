@@ -3,7 +3,13 @@ using System.Collections;
 
 public class BasePerson :BaseObject {
 
-    private GameObject personObject;
+	public Transform trans;
+	public AnimationCom aniCom;
+
+
+
+	protected GameObject personObject;
+	protected FSM fsm;
 
     public GameObject PersonObj 
     {
