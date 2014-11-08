@@ -1,33 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class IdleState : State 
+public class IdleState : IState 
 {
-    public override string Name
-    {
-        get
-        {
-            this.name = StateName.Idle;
-            return StateName.Idle;
-        }
-    }
+	public string name
+	{
+		get 
+		{
+			return StateType.Idle.ToString();
+		}
+	}
 
 	public IdleState()
 	{
-		this.name = StateName.Idle;
+
 	}
 
-    public override void OnStateEnter()
-    {
-        base.OnStateEnter();
-    }
+	public void OnEnter()
+	{
 
-    public override void OnStateStay()
-    {
-        base.OnStateStay();
-    }
-    public override void OnStateExit()
-    {
-        base.OnStateExit();
-    }
+	}
+
+	public void OnUpdate(){}
+
+	public void OnExit(){}
 }

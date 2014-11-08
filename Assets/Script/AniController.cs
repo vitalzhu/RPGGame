@@ -22,6 +22,8 @@ public class AniController : BaseObject
         if (speed >= 0) { aniData.speed = speed; }
         if (wm != null) { aniData.wrapMode = wm; }
     }
+
+
 }
 
 [SerializeField]

@@ -1,47 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class State 
+public interface IState 
 {
+	
 
-	protected string name;
-
-	public virtual string Name
+	string name
 	{
-		get{return name;}
-		/*
-		set{
-			if(value !=null)
-			{
-				name = value;
-			}
-		}*/
+		get;
 	}
 
 	/// <summary>
 	/// 当新的状态进入
 	/// </summary>
-	public virtual void OnStateEnter()
-	{
-
-	}
+	void OnEnter();
 
 	/// <summary>
 	/// 停留在当前状态
 	/// </summary>
-	public virtual void OnStateStay()
-	{
-
-	}
+	void OnUpdate();
 
 	/// <summary>
 	/// 退出当前状态
 	/// </summary>
-	public virtual void OnStateExit()
-	{
-
-	}
-
+	void OnExit();
 
 
 }
