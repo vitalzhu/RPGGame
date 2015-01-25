@@ -16,12 +16,12 @@ public class IdleState : IState
 
 	}
 
-	public void OnEnter()
+	public void Enter()
 	{
 
 	}
 
-	public void OnUpdate(){}
+	public void Execute(){}
 
-	public void OnExit(){}
+	public void Exit(){}
 }

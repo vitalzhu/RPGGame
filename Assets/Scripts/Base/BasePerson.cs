@@ -4,7 +4,7 @@ using System.Collections;
 public class BasePerson :BaseObject {
 
 	public Transform trans;
-	public AnimationCom aniCom;
+	public AnimCom aniCom;
 
 
 

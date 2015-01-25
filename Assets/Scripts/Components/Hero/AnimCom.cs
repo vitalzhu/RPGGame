@@ -1,17 +1,27 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AnimationCom : MonoBehaviour {
+public class AnimCom : MonoBehaviour {
 
 	private Animation anim;
+
+	public CallBack.ResposeCallBack OnKeyFrameEnter;
 
 	void Awake()
 	{
 		anim = this.animation;
 
 	}
-	
 
+	public void OnKeyFrameEvent(int value)
+	{
+		if(OnKeyFrameEnter!=null)
+		{
+			OnKeyFrameEnter((object)value);
+		}
+	}
+
+	#region ANIMATION_BEHAVIOUR
 	public void Idle()
 	{
 		string name = "idle";
@@ -36,6 +46,7 @@ public class AnimationCom : MonoBehaviour {
 		PlayAnimation (name ,WrapMode.Once);
 	}
 
+	#endregion ANIMATION_BEHAVIOUR
 	/// <summary>
 	/// 播放动画
 	/// </summary>
@@ -45,7 +56,10 @@ public class AnimationCom : MonoBehaviour {
 	{
 		anim.CrossFade (name);
 		anim.wrapMode = wrapMode;
+
+
 	}
+
 
 
 }

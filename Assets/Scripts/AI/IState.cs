@@ -13,17 +13,17 @@ public interface IState
 	/// <summary>
 	/// 当新的状态进入
 	/// </summary>
-	void OnEnter();
+	void Enter();
 
 	/// <summary>
 	/// 停留在当前状态
 	/// </summary>
-	void OnUpdate();
+	void Execute();
 
 	/// <summary>
 	/// 退出当前状态
 	/// </summary>
-	void OnExit();
+	void Exit();
 
 
 }
